@@ -2,6 +2,8 @@ require "test_helper"
 
 class TasksControllerTest < ActionDispatch::IntegrationTest
   setup do
+    @user = User.create!(email: 'u@u.com', password: '123456', user_type: :admin)
+    login_as @user
     @task = tasks(:one)
   end
 
