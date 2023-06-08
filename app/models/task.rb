@@ -1,7 +1,7 @@
 class Task < ApplicationRecord
-  validates :name, presence: true, uniqueness: { case_sensitive: true }
+  validates :name, presence: true, format: { with: /\A[a-zA-Z0-9 ]+\z/, message: 'Only letters and numbers allowed' }
   validates :description, length: { maximum: 100 }
-  validate :name_cannot_be_updated_if_in_progress
+  validate :name_cannot_be_updated_if_in_progress, on: :update
 
   enum status: [:active, :in_progress, :inactive]
   

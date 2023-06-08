@@ -36,7 +36,7 @@ rails s
 
 A task has the following fields
 
-* Name: Uniq name for the task
+* Name: Name for the task
 
 * Description: Description of the object
 
@@ -46,7 +46,7 @@ A task has the following fields
 
 A task has the following validations
 
-* Name is required and must be uniq. It is case sensitive.
+* Name is required and must be only number, letters and spaces.
 
 * Description is optional, but cannot be greater than 100 characters
 

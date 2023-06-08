@@ -3,7 +3,11 @@ class TasksController < ApplicationController
 
   # GET /tasks
   def index
-    @tasks = Task.all
+    order_by = params[:order_by] || :id
+    page = params[:page]&.to_i || 1
+    per_page = params[:per_page]&.to_i || 25
+    
+    @tasks = Task.limit(per_page).offset(page - 1).order(order_by)
 
     render json: @tasks
   end
