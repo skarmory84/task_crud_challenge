@@ -32,11 +32,21 @@ Finally, start the server
 rails s
 ```
 
+## Task model description
+
+A task has the following fields
+
+* Name: Uniq name for the task
+
+* Description: Description of the object
+
+* Status: Current status of the object
+
 ## Validations
 
-A Task has the following validations
+A task has the following validations
 
-* Name is required and must be uniq
+* Name is required and must be uniq. It is case sensitive.
 
 * Description is optional, but cannot be greater than 100 characters
 

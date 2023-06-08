@@ -12,6 +12,9 @@ gem "sqlite3", "~> 1.4"
 # Use the Puma web server [https://github.com/puma/puma]
 gem "puma", "~> 5.0"
 
+# Use of active model serializers
+gem 'active_model_serializers', '~> 0.10.0'
+
 # Debug
 gem 'pry', '~> 0.13.1'
 
