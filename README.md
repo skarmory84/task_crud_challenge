@@ -1,24 +1,43 @@
-# README
+# Task CRUD Challenge
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Developed with:
 
-Things you may want to cover:
+* Ruby 3.0.5
 
-* Ruby version
+* Rails 7.0.5
 
-* System dependencies
+* SQLite Database
 
-* Configuration
+## Initialization:
 
-* Database creation
+First, install project dependencies
 
-* Database initialization
+```sh
+bundle install
+```
 
-* How to run the test suite
+Run migrations
 
-* Services (job queues, cache servers, search engines, etc.)
+```sh
+rails db:migrate
+```
 
-* Deployment instructions
+Get a default user and some tasks examples (optional)
+```sh
+rails db:seed
+```
 
-* ...
+Finally, start the server
+```sh
+rails s
+```
+
+## Validations
+
+A Task has the following validations
+
+* Name is required and must be uniq
+
+* Description is optional, but cannot be greater than 100 characters
+
+* The name of a task in progress can't be updated
