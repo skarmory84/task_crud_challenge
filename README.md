@@ -16,6 +16,12 @@ First, install project dependencies
 bundle install
 ```
 
+Create database
+
+```sh
+rails db:create
+```
+
 Run migrations
 
 ```sh

@@ -15,6 +15,15 @@ gem "puma", "~> 5.0"
 # Use of active model serializers
 gem 'active_model_serializers', '~> 0.10.0'
 
+# Use of devise gem for authentication
+gem 'devise'
+
+# Use of devise token as restful auth
+gem 'devise_token_auth'
+
+# Use of Can Can Can as authorization
+gem 'cancancan'
+
 # Debug
 gem 'pry', '~> 0.13.1'
 
