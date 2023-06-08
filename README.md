@@ -38,6 +38,25 @@ Finally, start the server
 rails s
 ```
 
+## Authentication
+
+You can use default devise token methods to authenticate. Default auth path is `{{host}}`/auth
+
+```sh
+POST http://127.0.0.1:3000/auth/sign_in
+Content-Type: application/json
+
+{
+  "email": "admin@admin.com",
+  "password": "strongpassword"
+}
+```
+
+Then, include the Authorization: Bearer in each request.
+
+Devise token usage at https://devise-token-auth.gitbook.io/devise-token-auth/usage
+
+
 ## Task model description
 
 A task has the following fields

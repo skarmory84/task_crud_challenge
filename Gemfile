@@ -18,7 +18,7 @@ gem 'active_model_serializers', '~> 0.10.0'
 # Use of devise gem for authentication
 gem 'devise'
 
-# Use of devise token as restful auth
+# Use of devise token for restful auth
 gem 'devise_token_auth'
 
 # Use of Can Can Can as authorization
@@ -49,7 +49,7 @@ gem "bootsnap", require: false
 # gem "image_processing", "~> 1.2"
 
 # Use Rack CORS for handling Cross-Origin Resource Sharing (CORS), making cross-origin AJAX possible
-# gem "rack-cors"
+gem "rack-cors"
 
 group :development, :test do
   # See https://guides.rubyonrails.org/debugging_rails_applications.html#debugging-with-the-debug-gem

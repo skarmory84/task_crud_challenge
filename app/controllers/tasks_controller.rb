@@ -1,4 +1,5 @@
 class TasksController < ApplicationController
+  before_action :authenticate_user!
   before_action :set_task, only: %i[ show update destroy ]
 
   # GET /tasks
@@ -7,7 +8,7 @@ class TasksController < ApplicationController
     page = params[:page]&.to_i || 1
     per_page = params[:per_page]&.to_i || 25
     
-    @tasks = Task.limit(per_page).offset(page - 1).order(order_by)
+    @tasks = Task.limit(per_page).offset((page - 1) * per_page).order(order_by)
 
     render json: @tasks
   end
